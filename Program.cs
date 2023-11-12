@@ -32,9 +32,11 @@ namespace Lab5
 
             app.UseAuthorization();
 
-            app.MapControllers(); // Add this line to enable MVC-style routing
+            app.MapControllers();
 
-            app.MapGet("/", () => "Hello, World!");
+            app.MapGet("/Create", () => "Display Create Page");
+            app.MapGet("/Delete", () => "Display Delete Page");
+            app.MapGet("/Index", () => "Display Index Page");
 
             app.Run();
         }
