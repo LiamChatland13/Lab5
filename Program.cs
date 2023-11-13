@@ -1,6 +1,8 @@
 using Azure.Storage.Blobs;
 using Lab5.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
 namespace Lab5
 {
@@ -32,11 +34,11 @@ namespace Lab5
 
             app.UseAuthorization();
 
-            app.MapControllers();
+            app.MapRazorPages();
 
-            app.MapGet("/Create", () => "Display Create Page");
-            app.MapGet("/Delete", () => "Display Delete Page");
-            app.MapGet("/Index", () => "Display Index Page");
+            /*app.MapGet("/Pages/Predictions/Create", () => "Display Create Page");
+            app.MapGet("/Pages/Predictions/Delete", () => "Display Delete Page");
+            app.MapGet("/Pages/Predictions/Index", () => "Display Index Page");*/
 
             app.Run();
         }
